@@ -1,21 +1,22 @@
-# Use Moose to implement a class and Method::Signatures to implement methods.
+# Use Mouse to implement a class.
 
-package oop::moose_sig;
+package oop::mouse;
 use common::sense;
 use workload;
 
-use Moose;
-use Method::Signatures;
+use Mouse;
 use namespace::autoclean;
 
 has name   => (is => 'ro', isa => 'Str');
 has result => (is => 'rw', isa => 'ArrayRef');
 
-method run() {
+sub run {
+    my $self = shift;
     $self->result(workload->run());
 }
 
-method run_arg1($arg1) {
+sub run_arg1 {
+    my ($self, $arg1) = @_;
     $self->result(workload->run_arg1($arg1));
 }
 

@@ -9,7 +9,7 @@ class oop::moosex_sig {
     # use Method::Signatures produces a 'method redefinition' error
     use workload;
 
-    has name =>   (is => 'ro', isa => 'Str');
+    has name   => (is => 'ro', isa => 'Str');
     has result => (is => 'rw', isa => 'ArrayRef');
 
     def run() {

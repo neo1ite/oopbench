@@ -5,7 +5,7 @@ use Moops;
 class oop::moops {
     use workload;
 
-    has name =>   (is => 'ro', isa => Str);
+    has name   => (is => 'ro', isa => Str);
     has result => (is => 'rw', isa => ArrayRef);
 
     method run() {

@@ -7,7 +7,7 @@ use workload;
 use Moose;
 use namespace::autoclean;
 
-has name =>   (is => 'ro', isa => 'Str');
+has name   => (is => 'ro', isa => 'Str');
 has result => (is => 'rw', isa => 'ArrayRef');
 
 sub run {
